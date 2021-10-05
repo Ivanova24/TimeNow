@@ -1,0 +1,51 @@
+// Colors
+$color-text: hsla(210, 21%, 33%, 1); 
+$color-primary: hsla(242, 58%, 25%, 1);
+$color-secondary: hsla(187, 100%, 19%, 1); 
+$color-secondary-mockup: hsla(187, 70%, 57%, 1); 
+$color-secondary-features: hsla(187, 100%, 90%, 1); 
+$color-third: hsla(223, 53%, 49%, 1); 
+$color-white: hsla(0, 0%, 100%, 1);
+
+// Font
+$font-body: "Inter", sans-serif;
+
+// Font size
+$fs-text: 1.8rem;
+$fs-title-big: 5.6rem; 
+$fs-title-small: 3.6rem; 
+$fs-footer: 2rem;
+
+// breakPoints
+$breakpoints: (
+  small: 31.188rem,
+  medium: 43.688rem,
+  large: 62.438rem,
+  xlarge: 87.438rem,
+);
+
+@mixin breakpoint($size) {
+  $breakpoint-value: map-get($breakpoints, $size);
+
+  @media screen and (min-width: $breakpoint-value) {
+    @content;
+  }
+}
+
+// button
+@mixin button-bg($bg) {
+    background-color: $bg;
+  
+    // &:hover {
+    //   border: thin solid $color-primary;
+    //   background-color: $color-bg;
+    //   transition: all 0.5s ease;
+    //   color: $color-black;
+    // }
+
+    @if $bg == $color-primary {
+      color: $color-white;
+    } @else if $bg == $color-white {
+      color: $color-text;
+    }
+}

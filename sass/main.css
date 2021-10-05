@@ -1,0 +1,86 @@
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+}
+
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+a {
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  color: #425466;
+  line-height: 27px;
+}
+
+h1,
+h2 {
+  font-size: 3.6rem;
+  line-height: 43.57px;
+  font-weight: 700;
+}
+
+.btn {
+  border-color: transparent;
+  padding: 18px 24px;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.wrapper {
+  padding-inline: 2rem;
+}
+@media screen and (min-width: 43.688rem) {
+  .wrapper {
+    padding-inline: 4rem;
+  }
+}
+@media screen and (min-width: 62.438rem) {
+  .wrapper {
+    padding-inline: 15rem;
+  }
+}
+
+.hero {
+  display: grid;
+  row-gap: 4rem;
+  padding-top: 4rem;
+}
+.hero-description {
+  display: grid;
+  row-gap: 4rem;
+}
+/*# sourceMappingURL=main.css.map */

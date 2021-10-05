@@ -1,0 +1,81 @@
+@use 'variables' as v; 
+    
+html {
+  font-family: v.$font-body;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: v.$fs-text;
+}
+
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+a {
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  color: v.$color-text;
+  line-height: 27px;
+}
+
+h1,
+h2 {
+  font-size: v.$fs-title-small;
+  line-height: 43.57px;
+  font-weight: 700;
+}
+
+.btn {
+  border-color: transparent;
+  padding: 18px 24px;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+// .wrapper {
+//   width: clamp(15rem, 86vw, 130rem);
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+
+.wrapper {
+  padding-inline: 2rem;
+
+  @include v.breakpoint(medium) {
+    padding-inline: 4rem;
+  }
+
+  @include v.breakpoint(large) {
+    padding-inline: 15rem;
+  }
+}
+
