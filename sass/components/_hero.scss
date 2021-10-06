@@ -1,12 +1,114 @@
 @use "variables" as v;
 
 .hero {
-    display: grid; 
-    row-gap: 4rem;
-    padding-top: 4rem;
+  display: grid;
+  row-gap: 4rem;
+  padding-top: 4rem;
 
-    &-description {
-        display: grid;
-        row-gap: 4rem; 
+  &-description {
+    display: grid;
+    row-gap: 4rem;
+
+    .hero-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .menu-btn {
+        cursor: pointer;
+
+        .none {
+          display: none;
+        }
+      }
+
+      .menu.is-active {
+        opacity: 1;
+        pointer-events: auto;
+        row-gap: 30px;
+      }
+
+      .menu {
+        background-color: v.$color-white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+        position: absolute;
+        left: 0;
+        top: 108px;
+        width: 100%;
+        height: 100vh;
+        padding-top: 30px;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        pointer-events: none;
+
+        .btn-cta {
+          @include v.button-bg(v.$color-primary);
+        }
+      }
     }
+
+    .hero-text {
+      display: grid;
+      row-gap: 8px;
+    
+      h1 {
+        color: v.$color-primary;
+      }
+
+      &-btn {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 3rem;
+        margin-block: 8px 16px;
+
+        .btn-cta {
+          @include v.button-bg(v.$color-primary);
+          max-width: 19.6rem;
+          max-height: 6.3rem;
+        }
+
+        .btn-cta__demo {
+          @include v.button-bg(v.$color-white);
+          max-width: 14.8rem;
+          max-height: 6.3rem;
+        }
+      }
+
+      &-accord {
+        display: flex;
+        column-gap: 16px;
+
+        p {
+          a {
+            text-decoration: underline;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  @include v.breakpoint(medium) {
+    .hero-nav {
+      column-gap: 50px;
+
+      .menu-btn,
+      .btn-cta {
+        display: none;
+      }
+
+      .menu {
+        column-gap: 2.4rem;
+        position: static;
+        opacity: 1;
+        pointer-events: auto;
+        height: auto;
+        flex-direction: row;
+        padding-top: 0;
+      }
+    }
+  }
 }
