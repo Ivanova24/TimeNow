@@ -25,7 +25,7 @@
       .menu.is-active {
         opacity: 1;
         pointer-events: auto;
-        row-gap: 30px;
+        row-gap: 4rem;
       }
 
       .menu {
@@ -91,8 +91,18 @@
     }
   }
 
+  &-img {
+    div {
+      .btn-cta {
+        display: none; 
+      }
+    }
+  }
+
   @include v.breakpoint(medium) {
-    .hero-nav {
+    grid-template-columns: 1fr 1fr;
+
+    &-nav {
       column-gap: 50px;
 
       .menu-btn,
@@ -108,6 +118,17 @@
         height: auto;
         flex-direction: row;
         padding-top: 0;
+      }
+    }
+
+    &-img {
+      div {
+        display: grid;
+
+        .btn-cta {
+          @include v.button-bg(v.$color-primary);
+          display: inline-block;
+        }
       }
     }
   }
