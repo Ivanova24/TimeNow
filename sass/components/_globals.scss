@@ -1,5 +1,5 @@
-@use 'variables' as v; 
-    
+@use "variables" as v;
+
 html {
   font-family: v.$font-body;
   font-size: 62.5%;
@@ -68,14 +68,16 @@ h2 {
 // }
 
 .wrapper {
-  padding-inline: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 
   @include v.breakpoint(medium) {
-    padding-inline: 4rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   @include v.breakpoint(large) {
-    padding-inline: 15rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
   }
 }
-

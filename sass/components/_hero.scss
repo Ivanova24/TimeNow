@@ -3,11 +3,11 @@
 .hero {
   display: grid;
   row-gap: 4rem;
-  padding-top: 4rem;
 
   &-description {
     display: grid;
     row-gap: 4rem;
+    padding-top: 4rem;
 
     .hero-nav {
       display: flex;
@@ -53,7 +53,7 @@
     .hero-text {
       display: grid;
       row-gap: 8px;
-    
+
       h1 {
         color: v.$color-primary;
       }
@@ -92,9 +92,9 @@
   }
 
   &-img {
-    div {
+    &-container {
       .btn-cta {
-        display: none; 
+        display: none;
       }
     }
   }
@@ -102,33 +102,85 @@
   @include v.breakpoint(medium) {
     grid-template-columns: 1fr 1fr;
 
-    &-nav {
-      column-gap: 50px;
+    &-description {
+      padding-top: 5.5rem;
+      padding-right: 8.5rem;
+      align-items: baseline;
+      row-gap: 0;
 
-      .menu-btn,
-      .btn-cta {
-        display: none;
+      .hero-nav {
+        column-gap: 50px;
+
+        .menu-btn,
+        .btn-cta {
+          display: none;
+        }
+
+        .menu {
+          column-gap: 2.4rem;
+          position: static;
+          opacity: 1;
+          pointer-events: auto;
+          height: auto;
+          flex-direction: row;
+          padding-top: 0;
+        }
       }
 
-      .menu {
-        column-gap: 2.4rem;
-        position: static;
-        opacity: 1;
-        pointer-events: auto;
-        height: auto;
-        flex-direction: row;
-        padding-top: 0;
+      .hero-text {
+        &-btn {
+          row-gap: 8px;
+        }
       }
     }
 
     &-img {
-      div {
-        display: grid;
+      background-color: v.$color-secondary-mockup;
+      height: 736px;
+      padding-top: 4rem;
+      display: flex;
+      flex-direction: column;
+      row-gap: 13rem;
 
-        .btn-cta {
-          @include v.button-bg(v.$color-primary);
-          display: inline-block;
+      .btn-cta {
+        @include v.button-bg(v.$color-primary);
+        display: inline-block;
+      }
+
+      .btn-cta__nav {
+        align-self: flex-end;
+        margin-right: 4rem;
+      }
+
+      &-container {
+        padding-right: 2.3rem;
+        padding-left: 3.4rem;
+        max-width: 60rem;
+        max-height: 59.5rem;
+      }
+    }
+  }
+
+  @include v.breakpoint(large) {
+    &-description {
+      .hero-text {
+        h1 {
+          font-size: v.$fs-title-big;
+          line-height: 67.77px;
         }
+      }
+    }
+
+    &-img {
+      height: 900px;
+
+      .btn-cta__nav {
+        margin-right: 15rem;
+      }
+
+      &-container {
+        padding-left: 5.8rem;
+        padding-right: 6rem;
       }
     }
   }
