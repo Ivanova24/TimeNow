@@ -92,10 +92,13 @@
   }
 
   &-img {
+    .btn-cta__nav {
+      display: none;
+    }
+
     &-container {
-      .btn-cta {
-        display: none;
-      }
+      background-color: v.$color-secondary-mockup;
+      padding: 45px 34px 45px 23px;
     }
   }
 
@@ -136,11 +139,11 @@
 
     &-img {
       background-color: v.$color-secondary-mockup;
-      height: 736px;
+      height: 73.6rem;
       padding-top: 4rem;
       display: flex;
       flex-direction: column;
-      row-gap: 13rem;
+      row-gap: 12rem;
 
       .btn-cta {
         @include v.button-bg(v.$color-primary);
@@ -153,10 +156,7 @@
       }
 
       &-container {
-        padding-right: 2.3rem;
-        padding-left: 3.4rem;
-        max-width: 60rem;
-        max-height: 59.5rem;
+        padding: 0 3.4rem 0 2.3rem;
       }
     }
   }
@@ -172,7 +172,7 @@
     }
 
     &-img {
-      height: 900px;
+      height: 90rem;
 
       .btn-cta__nav {
         margin-right: 15rem;
