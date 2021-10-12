@@ -266,4 +266,93 @@ h2 {
     padding-right: 6rem;
   }
 }
+
+.main-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 4.6rem;
+  padding-bottom: 4.6rem;
+  row-gap: 3.2rem;
+}
+.main-social-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 3.2rem;
+}
+.main-social-title h2 {
+  color: #1d1b65;
+}
+.main-social-title ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8px;
+}
+.main-social-title ul li {
+  width: 50px;
+  height: 50px;
+}
+@media screen and (min-width: 43.688rem) {
+  .main-social-title {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main-social-title h2 {
+    -ms-flex-preferred-size: 52%;
+        flex-basis: 52%;
+  }
+  .main-social-title ul {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+  }
+}
+@media screen and (min-width: 62.438rem) {
+  .main-social {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main-social-title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-preferred-size: 47%;
+        flex-basis: 47%;
+  }
+  .main-social-description {
+    -ms-flex-preferred-size: 42%;
+        flex-basis: 42%;
+  }
+}
 /*# sourceMappingURL=main.css.map */
