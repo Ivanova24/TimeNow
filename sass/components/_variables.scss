@@ -35,6 +35,7 @@ $breakpoints: (
 // button
 @mixin button-bg($bg) {
     background-color: $bg;
+    max-width: 19.6rem;
   
     // &:hover {
     //   border: thin solid $color-primary;

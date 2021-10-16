@@ -66,8 +66,6 @@
 
         .btn-cta {
           @include v.button-bg(v.$color-primary);
-          max-width: 19.6rem;
-          max-height: 6.3rem;
         }
 
         .btn-cta__demo {

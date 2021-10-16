@@ -48,7 +48,7 @@ p {
 h1,
 h2 {
   font-size: 3.6rem;
-  line-height: 43.57px;
+  line-height: 44px;
   font-weight: 700;
 }
 
@@ -57,7 +57,6 @@ h2 {
   padding: 18px 24px;
   border-radius: 5px;
   font-weight: 700;
-  cursor: pointer;
 }
 
 .wrapper {
@@ -134,6 +133,7 @@ h2 {
 }
 .hero-description .hero-nav .menu .btn-cta {
   background-color: #1d1b65;
+  max-width: 19.6rem;
   color: white;
 }
 .hero-description .hero-text {
@@ -156,12 +156,12 @@ h2 {
 }
 .hero-description .hero-text-btn .btn-cta {
   background-color: #1d1b65;
-  color: white;
   max-width: 19.6rem;
-  max-height: 6.3rem;
+  color: white;
 }
 .hero-description .hero-text-btn .btn-cta__demo {
   background-color: white;
+  max-width: 19.6rem;
   color: #425466;
   max-width: 14.8rem;
   max-height: 6.3rem;
@@ -238,6 +238,7 @@ h2 {
   }
   .hero-img .btn-cta {
     background-color: #1d1b65;
+    max-width: 19.6rem;
     color: white;
     display: inline-block;
   }
@@ -338,6 +339,8 @@ h2 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
   .main-social-title {
     -webkit-box-orient: vertical;
@@ -351,6 +354,65 @@ h2 {
         flex-basis: 47%;
   }
   .main-social-description {
+    -ms-flex-preferred-size: 42%;
+        flex-basis: 42%;
+  }
+}
+.main-features {
+  background-color: #ccf9ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  row-gap: 6rem;
+}
+.main-features-dashboard, .main-features-analytics {
+  display: grid;
+  row-gap: 8px;
+}
+.main-features-dashboard p:first-child, .main-features-analytics p:first-child {
+  color: #3b60bf;
+  font-weight: 700;
+  line-height: 2.2rem;
+}
+.main-features-dashboard h2, .main-features-analytics h2 {
+  color: #005661;
+  max-width: 49.3rem;
+}
+.main-features-dashboard p:last-of-type, .main-features-analytics p:last-of-type {
+  margin-bottom: 8px;
+}
+.main-features-dashboard .btn-cta, .main-features-analytics .btn-cta {
+  background-color: #1d1b65;
+  max-width: 19.6rem;
+  color: white;
+}
+.main-features-dashboard a, .main-features-analytics a {
+  color: #425466;
+  font-weight: 700;
+}
+@media screen and (min-width: 62.438rem) {
+  .main-features {
+    padding-top: 6.7rem;
+    padding-bottom: 6.7rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .main-features-dashboard {
+    -ms-flex-preferred-size: 47%;
+        flex-basis: 47%;
+  }
+  .main-features-analytics {
     -ms-flex-preferred-size: 42%;
         flex-basis: 42%;
   }

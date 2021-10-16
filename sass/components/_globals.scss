@@ -49,7 +49,7 @@ p {
 h1,
 h2 {
   font-size: v.$fs-title-small;
-  line-height: 43.57px;
+  line-height: 44px;
   font-weight: 700;
 }
 
@@ -58,14 +58,7 @@ h2 {
   padding: 18px 24px;
   border-radius: 5px;
   font-weight: 700;
-  cursor: pointer;
 }
-
-// .wrapper {
-//   width: clamp(15rem, 86vw, 130rem);
-//   margin-left: auto;
-//   margin-right: auto;
-// }
 
 .wrapper {
   padding-left: 2rem;
