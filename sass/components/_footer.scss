@@ -1,1 +1,90 @@
-@use "variables" as v; 
+@use "variables" as v;
+
+.footer {
+  display: grid;
+  padding-top: 3.7rem;
+  padding-bottom: 4rem;
+  row-gap: 3.2rem;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3.2rem;
+
+    &-nav {
+      display: flex;
+      flex-flow: row wrap;
+      column-gap: 9.2rem;
+      row-gap: 2.4rem;
+
+      .links {
+        display: grid;
+        row-gap: 1.6rem;
+
+        h3 {
+          font-size: 2rem;
+          font-weight: 700;
+        }
+
+        ul {
+          display: grid;
+          row-gap: 8px;
+          color: v.$color-text;
+        }
+      }
+    }
+
+    &-form {
+      display: grid;
+      row-gap: 8px;
+
+      p {
+        color: v.$color-black;
+        font-weight: 700;
+      }
+
+      .form {
+        border: 1px solid #a8a8a8;
+        border-radius: 5px;
+        position: relative;
+        display: flex;
+        max-width: 432px;
+        height: 76px;
+
+        input[type="email"] {
+          padding-left: 25px;
+        }
+
+        .btn-cta {
+          @include v.button-bg(v.$color-primary);
+          position: absolute;
+          margin-top: 5px;
+          margin-right: 6px;
+          height: 63px;
+          top: 0;
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  @include v.breakpoint(large) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+
+    &-content {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      &-nav {
+        flex-basis: 47%;
+      }
+
+      &-form {
+        flex-basis: 38%;
+      }
+    }
+  }
+}

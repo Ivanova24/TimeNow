@@ -171,10 +171,10 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer wrapper">
       <svg
         width="24"
-        height="24"
+        height="22"
         viewBox="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -184,37 +184,39 @@
           fill="#E8704A"
         />
       </svg>
-      <article class="footer-links">
-        <nav>
-          <div>
+      <article class="footer-content">
+        <nav class="footer-content-nav">
+          <div class="links">
             <h3>Product</h3>
-            <ul>
+            <ul role="list">
               <li><a href="#">Homepage</a></li>
               <li><a href="#">Pricing</a></li>
               <li><a href="#">Features</a></li>
             </ul>
           </div>
-          <div>
+          <div class="links">
             <h3>Help</h3>
-            <ul>
+            <ul role="list">
               <li><a href="#">Live Chat</a></li>
               <li><a href="#">Send Email</a></li>
               <li><a href="#">FAQ</a></li>
             </ul>
           </div>
-          <div>
+          <div class="links">
             <h3>Company</h3>
-            <ul>
+            <ul role="list">
               <li><a href="#">About</a></li>
               <li><a href="#">Customers</a></li>
               <li><a href="#">Blog</a></li>
             </ul>
           </div>
         </nav>
-        <form>
+        <form class="footer-content-form">
           <p>Try TweetNow</p>
-          <input type="email" placeholder="Email Address" required />
-          <button class="btn btn-cta">Start Scheduling</button>
+          <label class="form">
+            <input type="email" placeholder="Email Address" required />
+            <button class="btn btn-cta">Start Scheduling</button>
+          </label>
         </form>
       </article>
     </footer>
