@@ -512,12 +512,113 @@ h2 {
             align-items: center;
   }
   .footer-content-nav {
-    -ms-flex-preferred-size: 47%;
-        flex-basis: 47%;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
   .footer-content-form {
-    -ms-flex-preferred-size: 38%;
-        flex-basis: 38%;
+    -ms-flex-preferred-size: 435px;
+        flex-basis: 435px;
+  }
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+.header-nav .menu.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  row-gap: 4rem;
+}
+.header-nav .menu {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 30px;
+  position: absolute;
+  left: 0;
+  top: 108px;
+  width: 100%;
+  height: 100vh;
+  padding-top: 30px;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+.header-nav .menu li:last-of-type a {
+  font-weight: 700;
+}
+.header-nav .menu .btn-nav {
+  background-color: #1d1b65;
+  max-width: 19.6rem;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header .menu-btn {
+  cursor: pointer;
+}
+.header .menu-btn .none {
+  display: none;
+}
+.header .btn-cta {
+  background-color: #1d1b65;
+  max-width: 19.6rem;
+  color: white;
+  display: none;
+}
+@media screen and (min-width: 43.688rem) {
+  .header-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 50px;
+       -moz-column-gap: 50px;
+            column-gap: 50px;
+  }
+  .header-nav .menu {
+    -webkit-column-gap: 2.4rem;
+       -moz-column-gap: 2.4rem;
+            column-gap: 2.4rem;
+    position: static;
+    opacity: 1;
+    pointer-events: auto;
+    height: auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-top: 0;
+  }
+  .header-nav .menu .btn-nav {
+    display: none;
+  }
+  .header .menu-btn {
+    display: none;
+  }
+  .header .btn-cta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 /*# sourceMappingURL=main.css.map */

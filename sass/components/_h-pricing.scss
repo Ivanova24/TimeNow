@@ -1,0 +1,87 @@
+@use "variables" as v;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+
+  &-nav {
+    .menu.is-active {
+      opacity: 1;
+      pointer-events: auto;
+      row-gap: 4rem;
+    }
+
+    .menu {
+      background-color: v.$color-white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 30px;
+      position: absolute;
+      left: 0;
+      top: 108px;
+      width: 100%;
+      height: 100vh;
+      padding-top: 30px;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+
+      li:last-of-type {
+        a {
+          font-weight: 700;
+        }
+      }
+
+      .btn-nav {
+        @include v.button-bg(v.$color-primary);
+        display: flex;
+      }
+    }
+  }
+
+  .menu-btn {
+    cursor: pointer;
+
+    .none {
+      display: none;
+    }
+  }
+
+  .btn-cta {
+    @include v.button-bg(v.$color-primary);
+    display: none;
+  }
+
+  @include v.breakpoint(medium) {
+    &-nav {
+      display: flex;
+      column-gap: 50px;
+
+      .menu {
+        column-gap: 2.4rem;
+        position: static;
+        opacity: 1;
+        pointer-events: auto;
+        height: auto;
+        flex-direction: row;
+        padding-top: 0;
+
+        .btn-nav {
+          display: none;
+        }
+      }
+    }
+
+    .menu-btn {
+      display: none;
+    }
+
+    .btn-cta {
+      display: flex;
+    }
+  }
+}
