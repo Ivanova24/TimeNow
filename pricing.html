@@ -28,7 +28,8 @@
     <header class="header wrapper">
       <nav class="header-nav">
         <a href="/index.html" aria-label="homepage">
-          <svg aria-hidden="true"
+          <svg
+            aria-hidden="true"
             width="24"
             height="24"
             viewBox="0 0 24 24"
@@ -48,7 +49,8 @@
         </ul>
       </nav>
       <button class="menu-btn" aria-label="main menu">
-        <svg aria-label="open main menu"
+        <svg
+          aria-label="open main menu"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -56,7 +58,8 @@
         >
           <path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z" />
         </svg>
-        <svg aria-label="close main menu"
+        <svg
+          aria-label="close main menu"
           class="none"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -79,18 +82,21 @@
           social media, or have been on there for a long time, we have a plan
           that’s right for you.
         </p>
-        <div class="toggle" aria-label="payment plans">
-          <label class="toggle-monthly">Billed Monthly</label>
-          <!-- <input type="checkbox" class="toggler_plan" /> -->
-          <button>toggle</button>
-          <label class="toggle-yearly">Billed Yearly</label>
-        </div>
+        <fieldset aria-label="switcher" role="radiogroup">
+          <div class="c-toggle">
+            <label for="monthly">Billed Monthly</label>
+            <span class="c-toggle__wrapper">
+              <input type="radio" name="theme" id="monthly" checked />
+              <input type="radio" name="theme" id="yearly" />
+              <span aria-hidden="true" class="c-toggle__background"></span>
+              <span aria-hidden="true" class="c-toggle__switcher"></span>
+            </span>
+            <label for="yearly">Billed Yearly</label>
+          </div>
+        </fieldset>
       </div>
 
       <div class="main-card">
-        <!-- <input type="checkbox" class="toggler_plan" />
-        <div class="plan_button"></div> -->
-      
         <div class="plans_monthly">
           <div class="plan_container">
             <div class="plan plan_1">
