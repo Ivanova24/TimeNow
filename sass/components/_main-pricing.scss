@@ -19,15 +19,19 @@
     }
 
     fieldset {
+      margin-top: 2.4rem;
       .c-toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 16px;
+
         label {
           color: v.$color-text;
           cursor: pointer;
         }
 
         .c-toggle__wrapper {
-          display: inline-block;
-          vertical-align: middle;
           width: 6rem;
           height: 3.2rem;
           border-radius: 3.2rem;
@@ -36,7 +40,7 @@
 
           input[type="radio"] {
             display: inline-block;
-            margin-right: -2px;
+            margin-right: -4px;
             width: 50%;
             height: 100%;
             opacity: 0;
@@ -45,22 +49,22 @@
             cursor: pointer;
 
             &:focus ~ .c-toggle__switcher {
-              border: 3px solid hsla(333, 40%, 45%, 1);
-              top: -2px;
+              border: 3px solid transparent;
             }
           }
 
           .c-toggle__switcher {
-            // the toggle
+            margin-top: 3px;
+            margin-left: 3px;
             display: block;
             position: absolute;
             top: 0;
             left: 0;
             right: 100%;
-            width: 50%;
-            height: 100%;
+            width: 24px;
+            height: 24px;
             border-radius: 50%;
-            background-color: hsla(333, 60%, 60%, 1);
+            background-color: v.$color-white;
             transition: all 0.1s ease-out;
             z-index: 2;
           }
@@ -74,7 +78,7 @@
             height: 100%;
             z-index: 0;
             border-radius: 3.5em;
-            background-color: #eee;
+            background-color: v.$color-switch;
             transition: all 0.1s ease-out;
           }
 
