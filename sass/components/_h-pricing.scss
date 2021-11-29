@@ -8,6 +8,7 @@
 
   &-nav {
     .menu.is-active {
+      z-index: 1;
       opacity: 1;
       pointer-events: auto;
       row-gap: 4rem;

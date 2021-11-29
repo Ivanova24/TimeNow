@@ -91,14 +91,54 @@
     }
   }
 
+  &-card {
+    margin-bottom: 100px;
+    display: grid;
+    row-gap: 3rem;
+
+    .card {
+      border: 1px solid v.$color-border;
+      padding: 27px 34px 37px 34px;
+      border-radius: 5px;
+      display: grid;
+      row-gap: 16px;
+
+      &-price {
+        span {
+          line-height: 2.4rem;
+          font-weight: 400;
+          font-size: 2rem;
+        }
+      }
+
+      &-description {
+        padding-bottom: 2.3rem;
+        border-bottom: 1px solid v.$color-border;
+      }
+
+      &-benefits {
+        padding: 16px 0 16px 0;
+        display: grid;
+        row-gap: 16px;
+
+        li {
+          display: flex;
+          column-gap: 16px;
+        }
+      }
+
+      .btn-cta {
+        @include v.button-bg(v.$color-primary);
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
   @include v.breakpoint(medium) {
     & {
       margin-top: 6.9rem;
       margin-bottom: 6.3rem;
     }
-  }
-
-  &-card {
-    margin-bottom: 8rem;
   }
 }
